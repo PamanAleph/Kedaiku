@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Kedaiku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white font-inter">
+    <nav class="bg-[#EAEAEA] p-4 flex items-center justify-between shadow-2xl">
+        <div class="mx-auto">
+            <div class="relative text-gray-600">
+
+                <div class="flex gap-10">
+                    <button title="Open menu" type="button" id="openMenuButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+                            <path
+                                d="M0.979592 4.40816H26.449C26.99 4.40816 27.4286 3.96961 27.4286 3.42857V0.979592C27.4286 0.438551 26.99 0 26.449 0H0.979592C0.438551 0 0 0.438551 0 0.979592V3.42857C0 3.96961 0.438551 4.40816 0.979592 4.40816ZM0.979592 14.2041H26.449C26.99 14.2041 27.4286 13.7655 27.4286 13.2245V10.7755C27.4286 10.2345 26.99 9.79592 26.449 9.79592H0.979592C0.438551 9.79592 0 10.2345 0 10.7755V13.2245C0 13.7655 0.438551 14.2041 0.979592 14.2041ZM0.979592 24H26.449C26.99 24 27.4286 23.5614 27.4286 23.0204V20.5714C27.4286 20.0304 26.99 19.5918 26.449 19.5918H0.979592C0.438551 19.5918 0 20.0304 0 20.5714V23.0204C0 23.5614 0.438551 24 0.979592 24Z"
+                                fill="#007051" />
+                        </svg>
+                    </button>
+                    <div>
+                        <div
+                            class="relative flex items-center w-full h-10 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+                            <div class="grid place-items-center h-full w-12 text-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+
+                            <form action="">
+                                <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text"
+                                    id="search" placeholder="Search something.." />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="login_page.html"
+                            class="bg-[#007051] text-white font-bold py-2 px-4 rounded-lg uppercase">Login</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- sidebar -->
+
+    <aside aside id="sidebar"
+        class="bg-white text-[#616161] w-52 h-screen fixed top-15 right-0 transform translate-x-full transition-transform ease-in-out duration-300 shadow-2xl">
+        <div class="h-full p-3 space-y-2 w-60">
+            <div class="divide-y divide-gray-700">
+                <ul class="pt-2 pb-4 space-y-6 text-lg font-semibold ">
+                    <li class="dark:bg-gray-800 dark:text-gray-50">
+                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"
+                                fill="none">
+                                <path
+                                    d="M10 11.4286C13.1562 11.4286 15.7143 8.87054 15.7143 5.71429C15.7143 2.55804 13.1562 0 10 0C6.84375 0 4.28571 2.55804 4.28571 5.71429C4.28571 8.87054 6.84375 11.4286 10 11.4286ZM14 12.8571H13.2545C12.2634 13.3125 11.1607 13.5714 10 13.5714C8.83929 13.5714 7.74107 13.3125 6.74554 12.8571H6C2.6875 12.8571 0 15.5446 0 18.8571V20.7143C0 21.8973 0.959821 22.8571 2.14286 22.8571H17.8571C19.0402 22.8571 20 21.8973 20 20.7143V18.8571C20 15.5446 17.3125 12.8571 14 12.8571Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="keranjang_page.html" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"
+                                fill="none">
+                                <path
+                                    d="M18.3375 10.4625L19.9789 3.24024C20.0974 2.71879 19.7011 2.22222 19.1663 2.22222H5.52806L5.20979 0.66632C5.13049 0.278507 4.78924 0 4.39337 0H0.833334C0.37309 0 0 0.37309 0 0.833334V1.38889C0 1.84913 0.37309 2.22222 0.833334 2.22222H3.25983L5.69899 14.1471C5.11545 14.4826 4.72222 15.1119 4.72222 15.8333C4.72222 16.9072 5.59278 17.7778 6.66667 17.7778C7.74056 17.7778 8.61111 16.9072 8.61111 15.8333C8.61111 15.2891 8.38726 14.7974 8.02695 14.4444H15.3064C14.9461 14.7974 14.7222 15.2891 14.7222 15.8333C14.7222 16.9072 15.5928 17.7778 16.6667 17.7778C17.7406 17.7778 18.6111 16.9072 18.6111 15.8333C18.6111 15.0635 18.1636 14.3982 17.5146 14.0832L17.7062 13.2402C17.8247 12.7188 17.4283 12.2222 16.8936 12.2222H7.57351L7.34625 11.1111H17.5249C17.914 11.1111 18.2513 10.8419 18.3375 10.4625Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my_order_page.html" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="27" viewBox="0 0 20 27"
+                                fill="none">
+                                <path
+                                    d="M19.6354 5.46875L14.5365 0.364583C14.3021 0.130208 13.9844 0 13.651 0H13.3333V6.66667H20V6.34896C20 6.02083 19.8698 5.70312 19.6354 5.46875ZM11.6667 7.08333V0H1.25C0.557292 0 0 0.557292 0 1.25V25.4167C0 26.1094 0.557292 26.6667 1.25 26.6667H18.75C19.4427 26.6667 20 26.1094 20 25.4167V8.33333H12.9167C12.2292 8.33333 11.6667 7.77083 11.6667 7.08333ZM3.33333 3.75C3.33333 3.51979 3.51979 3.33333 3.75 3.33333H7.91667C8.14687 3.33333 8.33333 3.51979 8.33333 3.75V4.58333C8.33333 4.81354 8.14687 5 7.91667 5H3.75C3.51979 5 3.33333 4.81354 3.33333 4.58333V3.75ZM3.33333 7.91667V7.08333C3.33333 6.85312 3.51979 6.66667 3.75 6.66667H7.91667C8.14687 6.66667 8.33333 6.85312 8.33333 7.08333V7.91667C8.33333 8.14687 8.14687 8.33333 7.91667 8.33333H3.75C3.51979 8.33333 3.33333 8.14687 3.33333 7.91667ZM10.8333 21.6604V22.9167C10.8333 23.1469 10.6469 23.3333 10.4167 23.3333H9.58333C9.35312 23.3333 9.16667 23.1469 9.16667 22.9167V21.6516C8.57865 21.6214 8.00677 21.4161 7.53281 21.0604C7.32969 20.9078 7.31927 20.6036 7.50312 20.4281L8.1151 19.8443C8.25937 19.7068 8.47396 19.7005 8.64271 19.8062C8.84427 19.9323 9.07292 20 9.31042 20H10.7745C11.113 20 11.3891 19.6917 11.3891 19.313C11.3891 19.0031 11.201 18.7302 10.9323 18.65L8.58854 17.9469C7.62031 17.6562 6.94375 16.7271 6.94375 15.687C6.94375 14.4099 7.93594 13.3724 9.16615 13.3396V12.0833C9.16615 11.8531 9.3526 11.6667 9.58281 11.6667H10.4161C10.6464 11.6667 10.8328 11.8531 10.8328 12.0833V13.3484C11.4208 13.3786 11.9927 13.5833 12.4667 13.9396C12.6698 14.0922 12.6802 14.3964 12.4964 14.5719L11.8844 15.1557C11.7401 15.2932 11.5255 15.2995 11.3568 15.1937C11.1552 15.0672 10.9266 15 10.6891 15H9.225C8.88646 15 8.61042 15.3083 8.61042 15.687C8.61042 15.9969 8.79844 16.2698 9.06719 16.35L11.4109 17.0531C12.3792 17.3438 13.0557 18.2729 13.0557 19.313C13.0557 20.5906 12.0635 21.6276 10.8333 21.6604Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>My Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                fill="none">
+                                <path
+                                    d="M19.7445 12.9801L17.9502 11.942C18.1313 10.9631 18.1313 9.95874 17.9502 8.97975L19.7445 7.94168C19.9509 7.82353 20.0436 7.57878 19.9762 7.35091C19.5087 5.84867 18.7126 4.48989 17.6722 3.35899C17.5121 3.18598 17.251 3.14378 17.0488 3.26194L15.2544 4.3C14.5005 3.65016 13.6328 3.148 12.6935 2.81886V0.746942C12.6935 0.510634 12.5292 0.303864 12.2975 0.253227C10.7517 -0.0927958 9.16792 -0.0759167 7.6979 0.253227C7.46623 0.303864 7.30196 0.510634 7.30196 0.746942V2.82308C6.36687 3.15644 5.49917 3.6586 4.74099 4.30422L2.95084 3.26616C2.74445 3.148 2.48751 3.18598 2.32745 3.36321C1.28706 4.4899 0.490969 5.84867 0.0234244 7.35513C-0.0481816 7.583 0.0486971 7.82775 0.255091 7.9459L2.04945 8.98397C1.86833 9.96296 1.86833 10.9673 2.04945 11.9463L0.255091 12.9843C0.0486971 13.1025 -0.0439694 13.3472 0.0234244 13.5751C0.490969 15.0773 1.28706 16.4361 2.32745 17.567C2.48751 17.74 2.74866 17.7822 2.95084 17.6641L4.7452 16.626C5.49917 17.2759 6.36687 17.778 7.30617 18.1072V20.1833C7.30617 20.4196 7.47044 20.6264 7.70211 20.677C9.24796 21.023 10.8317 21.0061 12.3017 20.677C12.5334 20.6264 12.6977 20.4196 12.6977 20.1833V18.1072C13.6328 17.7738 14.5005 17.2716 15.2586 16.626L17.053 17.6641C17.2594 17.7822 17.5163 17.7443 17.6764 17.567C18.7168 16.4403 19.5129 15.0816 19.9804 13.5751C20.0436 13.343 19.9509 13.0983 19.7445 12.9801ZM9.99771 13.8367C8.14017 13.8367 6.62802 12.3218 6.62802 10.4609C6.62802 8.59997 8.14017 7.08507 9.99771 7.08507C11.8553 7.08507 13.3674 8.59997 13.3674 10.4609C13.3674 12.3218 11.8553 13.8367 9.99771 13.8367Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <script>
+        const openMenuButton = document.getElementById("openMenuButton");
+        const sidebar = document.getElementById("sidebar");
+
+        openMenuButton.addEventListener("click", () => {
+            // Toggle the sidebar by changing its transform property
+            if (sidebar.style.transform === "translateX(0px)") {
+                sidebar.style.transform = "translateX(100%)";
+            } else {
+                sidebar.style.transform = "translateX(0px)";
+            }
+        });
+    </script>
+
+    <div class="max-w-2xl space-y-8 mx-auto sm:my-2 px-3 lg:px-0">
+        <!-- image -->
+        <section>
+            <img class="h-1/4 w-full p-3" src="../img/gratis_ongkir_banner.png">
+        </section>
+
+        <p class="uppercase text-[#616161] font-bold text-md">pilih kategori</p>
+        <!-- card -->
+        <section class="grid grid-cols-4 gap-4 text-black">
+            <!-- Card 1 -->
+            <a href="">
+                <div class="bg-white shadow-2xl">
+                    <div class="text-center">
+                        <img class="lg:h-28 lg:w-48 h-16 w-24 p-1 mx-auto rounded-lg" src="../img/buah.jpeg">
+                    </div>
+                    <p class="text-center lg:text-xl text-md pb-1 font-semibold uppercase">Buah</p>
+                </div>
+            </a>
+            <!-- Card 2 -->
+            <a href="">
+                <div class="bg-white shadow-2xl">
+                    <div class="text-center">
+                        <img class="lg:h-28 lg:w-48 h-16 w-24 p-1 mx-auto rounded-lg" src="../img/sayur.jpeg">
+                    </div>
+                    <p class="text-center lg:text-xl text-md pb-1 font-semibold uppercase">Sayur</p>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="">
+                <div class="bg-white shadow-2xl">
+                    <div class="text-center">
+                        <img class="lg:h-28 lg:w-48 h-16 w-24 p-1 mx-auto rounded-lg" src="../img/daging.jpeg">
+                    </div>
+                    <p class="text-center lg:text-xl text-md pb-1 font-semibold uppercase">daging</p>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="">
+                <div class="bg-white shadow-2xl">
+                    <div class="text-center">
+                        <img class="lg:h-28 lg:w-48 h-16 w-24 p-1 mx-auto rounded-lg" src="../img/bumbu.jpeg">
+                    </div>
+                    <p class="text-center lg:text-xl text-md pb-1 font-semibold uppercase">bumbu</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- card part2 -->
+        <section class="grid grid-cols-2 gap-4">
+            <!-- card 1 -->
+            <div class="bg-white shadow-2xl">
+                <div class="text-center pt-2">
+                    <img class="lg:h-56 lg:w-72 h-28 w-44 mx-auto rounded-lg" src="../img/pir_century.png">
+                </div>
+                <div class="text-justify text-[#616161] mt-2 px-2">
+                    <p class="lg:text-xl text-sm font-bold uppercase">Pir century</p>
+                    <p class="lg:text-sm text-xs font-medium lowercase">500g</p>
+                    <p class="lg:text-xl text-md font-semibold capitalize">Rp 15.000</p>
+                    <button type="button"
+                        class="lg:px-8 lg:py-3 lg:mt-4 lg:mb-2 px-6 py-1 mt-2 mb-1 w-full rounded-lg font-bold text-white bg-[#007051] uppercase">tambahkan</button>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="bg-white shadow-2xl">
+                <div class="text-center pt-2">
+                    <img class="lg:h-56 lg:w-72 h-28 w-44 mx-auto rounded-lg" src="../img/anggur_merah_impor.png">
+                </div>
+                <div class="text-justify text-[#616161] mt-2 px-2">
+                    <p class="lg:text-xl text-sm font-bold uppercase">anggur merah impor</p>
+                    <p class="lg:text-sm text-xs font-medium lowercase">500g</p>
+                    <p class="lg:text-xl text-md font-semibold capitalize">Rp 15.000</p>
+                    <button type="button"
+                        class="lg:px-8 lg:py-3 lg:mt-4 lg:mb-2 px-6 py-1 mt-2 mb-1 w-full rounded-lg font-bold text-white bg-[#007051] uppercase">tambahkan</button>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+</body>
+
+</html>

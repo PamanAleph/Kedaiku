@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-white">
+    <nav class="bg-[#EAEAEA] p-4 flex items-center justify-between shadow-2xl">
+        <div class="mx-auto">
+            <div class="relative text-gray-600">
+
+                <div class="flex gap-10">
+                    <button title="Open menu" type="button" id="openMenuButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+                            <path
+                                d="M0.979592 4.40816H26.449C26.99 4.40816 27.4286 3.96961 27.4286 3.42857V0.979592C27.4286 0.438551 26.99 0 26.449 0H0.979592C0.438551 0 0 0.438551 0 0.979592V3.42857C0 3.96961 0.438551 4.40816 0.979592 4.40816ZM0.979592 14.2041H26.449C26.99 14.2041 27.4286 13.7655 27.4286 13.2245V10.7755C27.4286 10.2345 26.99 9.79592 26.449 9.79592H0.979592C0.438551 9.79592 0 10.2345 0 10.7755V13.2245C0 13.7655 0.438551 14.2041 0.979592 14.2041ZM0.979592 24H26.449C26.99 24 27.4286 23.5614 27.4286 23.0204V20.5714C27.4286 20.0304 26.99 19.5918 26.449 19.5918H0.979592C0.438551 19.5918 0 20.0304 0 20.5714V23.0204C0 23.5614 0.438551 24 0.979592 24Z"
+                                fill="#007051" />
+                        </svg>
+                    </button>
+                    <div>
+                        <div
+                            class="relative flex items-center w-full h-10 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+                            <div class="grid place-items-center h-full w-12 text-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+
+                            <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text"
+                                id="search" placeholder="Search something.." />
+                        </div>
+                    </div>
+
+                    <div class="py-2 px-4 flex items-center">
+                        <p class="px-2">Wardana</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
+                            <path
+                                d="M10 11.4286C13.1562 11.4286 15.7143 8.87054 15.7143 5.71429C15.7143 2.55804 13.1562 0 10 0C6.84375 0 4.28571 2.55804 4.28571 5.71429C4.28571 8.87054 6.84375 11.4286 10 11.4286ZM14 12.8571H13.2545C12.2634 13.3125 11.1607 13.5714 10 13.5714C8.83929 13.5714 7.74107 13.3125 6.74554 12.8571H6C2.6875 12.8571 0 15.5446 0 18.8571V20.7143C0 21.8973 0.959821 22.8571 2.14286 22.8571H17.8571C19.0402 22.8571 20 21.8973 20 20.7143V18.8571C20 15.5446 17.3125 12.8571 14 12.8571Z"
+                                fill="#007051" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- sidebar -->
+
+    <aside aside id="sidebar"
+        class="bg-white text-[#616161] w-56 h-screen fixed top-15 right-0 transform translate-x-full transition-transform ease-in-out duration-300 shadow-2xl z-50">
+        <div class="h-full p-3 space-y-2 w-60">
+            <div class="divide-y divide-gray-700">
+                <ul class="pt-2 pb-4 space-y-6 text-lg font-semibold ">
+                    <li class="dark:bg-gray-800 dark:text-gray-50">
+                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M19.968 14.7963L18.9251 8.54656C18.8235 7.94502 18.304 7.50363 17.6908 7.50363H8.12861V5.00372H11.8785C12.2222 5.00372 12.5034 4.72248 12.5034 4.37874V0.624977C12.5034 0.28124 12.2222 0 11.8785 0H1.87884C1.5351 0 1.25386 0.28124 1.25386 0.624977V4.37484C1.25386 4.71858 1.5351 4.99982 1.87884 4.99982H5.6287V7.49972H2.31241C1.70306 7.49972 1.17964 7.94111 1.07809 8.54265L0.035155 14.7924C0.0117183 14.9291 0 15.0659 0 15.2026V18.7493C0 19.4407 0.558573 19.9993 1.24995 19.9993H18.7493C19.4407 19.9993 19.9993 19.4407 19.9993 18.7493V15.2065C20.0032 15.0698 19.9914 14.933 19.968 14.7963ZM10.941 9.68714C10.941 9.3434 11.2222 9.06217 11.566 9.06217H12.191C12.5347 9.06217 12.8159 9.3434 12.8159 9.68714V10.3121C12.8159 10.6559 12.5347 10.9371 12.191 10.9371H11.566C11.2222 10.9371 10.941 10.6559 10.941 10.3121V9.68714ZM9.69105 12.187H10.316C10.6598 12.187 10.941 12.4683 10.941 12.812V13.437C10.941 13.7807 10.6598 14.062 10.316 14.062H9.69105C9.34731 14.062 9.06607 13.7807 9.06607 13.437V12.812C9.06607 12.4683 9.34731 12.187 9.69105 12.187ZM8.4411 9.06217C8.78483 9.06217 9.06607 9.3434 9.06607 9.68714V10.3121C9.06607 10.6559 8.78483 10.9371 8.4411 10.9371H7.81612C7.47238 10.9371 7.19114 10.6559 7.19114 10.3121V9.68714C7.19114 9.3434 7.47238 9.06217 7.81612 9.06217H8.4411ZM3.12879 3.12488V1.87493H10.6285V3.12488H3.12879ZM4.69123 10.9371H4.06626C3.72252 10.9371 3.44128 10.6559 3.44128 10.3121V9.68714C3.44128 9.3434 3.72252 9.06217 4.06626 9.06217H4.69123C5.03497 9.06217 5.31621 9.3434 5.31621 9.68714V10.3121C5.31621 10.6559 5.03497 10.9371 4.69123 10.9371ZM5.31621 13.437V12.812C5.31621 12.4683 5.59745 12.187 5.94119 12.187H6.56616C6.9099 12.187 7.19114 12.4683 7.19114 12.812V13.437C7.19114 13.7807 6.9099 14.062 6.56616 14.062H5.94119C5.59745 14.062 5.31621 13.7807 5.31621 13.437ZM13.7534 17.8118C13.7534 17.9837 13.6128 18.1243 13.4409 18.1243H6.56616C6.3943 18.1243 6.25368 17.9837 6.25368 17.8118V17.1869C6.25368 17.015 6.3943 16.8744 6.56616 16.8744H13.4409C13.6128 16.8744 13.7534 17.015 13.7534 17.1869V17.8118ZM14.6909 13.437C14.6909 13.7807 14.4096 14.062 14.0659 14.062H13.4409C13.0972 14.062 12.8159 13.7807 12.8159 13.437V12.812C12.8159 12.4683 13.0972 12.187 13.4409 12.187H14.0659C14.4096 12.187 14.6909 12.4683 14.6909 12.812V13.437ZM16.5658 10.3121C16.5658 10.6559 16.2846 10.9371 15.9408 10.9371H15.3158C14.9721 10.9371 14.6909 10.6559 14.6909 10.3121V9.68714C14.6909 9.3434 14.9721 9.06217 15.3158 9.06217H15.9408C16.2846 9.06217 16.5658 9.3434 16.5658 9.68714V10.3121Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>Purchasing Stage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="building_separation_page.html" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"
+                                fill="none">
+                                <path
+                                    d="M9.73484 4.03476L3.3336 9.30692V14.9971C3.3336 15.1444 3.39212 15.2857 3.4963 15.3899C3.60048 15.4941 3.74178 15.5526 3.88911 15.5526L7.77978 15.5426C7.92663 15.5418 8.06722 15.483 8.17079 15.3789C8.27437 15.2748 8.33252 15.1339 8.33252 14.987V11.664C8.33252 11.5167 8.39104 11.3754 8.49522 11.2712C8.5994 11.167 8.7407 11.1085 8.88803 11.1085H11.1101C11.2574 11.1085 11.3987 11.167 11.5029 11.2712C11.6071 11.3754 11.6656 11.5167 11.6656 11.664V14.9846C11.6654 15.0577 11.6796 15.1301 11.7074 15.1977C11.7352 15.2653 11.7761 15.3268 11.8277 15.3785C11.8793 15.4303 11.9406 15.4714 12.0081 15.4994C12.0756 15.5274 12.148 15.5419 12.2211 15.5419L16.1104 15.5526C16.2577 15.5526 16.399 15.4941 16.5032 15.3899C16.6074 15.2857 16.6659 15.1444 16.6659 14.9971V9.3031L10.266 4.03476C10.1908 3.97411 10.0971 3.94104 10.0004 3.94104C9.90381 3.94104 9.81008 3.97411 9.73484 4.03476ZM19.8462 7.61816L16.9437 5.22564V0.416635C16.9437 0.306136 16.8998 0.200164 16.8216 0.12203C16.7435 0.0438954 16.6375 0 16.527 0H14.5827C14.4722 0 14.3663 0.0438954 14.2881 0.12203C14.21 0.200164 14.1661 0.306136 14.1661 0.416635V2.93762L11.0577 0.380179C10.7593 0.134705 10.385 0.000490707 9.99871 0.000490707C9.61239 0.000490707 9.23807 0.134705 8.93976 0.380179L0.151203 7.61816C0.109015 7.65303 0.0741102 7.69587 0.0484844 7.74424C0.0228586 7.7926 0.00701361 7.84554 0.00185477 7.90003C-0.00330407 7.95452 0.00232436 8.0095 0.0184184 8.06181C0.0345125 8.11413 0.0607569 8.16276 0.0956519 8.20492L0.981 9.28123C1.0158 9.32354 1.0586 9.35858 1.10696 9.38433C1.15532 9.41008 1.20828 9.42604 1.26282 9.4313C1.31735 9.43656 1.37239 9.43101 1.42477 9.41497C1.47716 9.39893 1.52587 9.37271 1.56811 9.33782L9.73484 2.61126C9.81008 2.55061 9.90381 2.51754 10.0004 2.51754C10.0971 2.51754 10.1908 2.55061 10.266 2.61126L18.4331 9.33782C18.4753 9.37272 18.5239 9.39896 18.5762 9.41506C18.6286 9.43115 18.6835 9.43678 18.738 9.43162C18.7925 9.42646 18.8455 9.41061 18.8938 9.38499C18.9422 9.35936 18.985 9.32446 19.0199 9.28227L19.9052 8.20596C19.9401 8.16355 19.9662 8.11467 19.9821 8.06213C19.998 8.00959 20.0034 7.95442 19.9979 7.89979C19.9924 7.84517 19.9762 7.79217 19.9502 7.74384C19.9241 7.69551 19.8888 7.6528 19.8462 7.61816Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span class="capitalize">building separation stage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"
+                                fill="none">
+                                <path
+                                    d="M19.4444 10H16.6667V13.3333L15.5556 12.5938L14.4444 13.3333V10H11.6667C11.3611 10 11.1111 10.25 11.1111 10.5556V17.2222C11.1111 17.5278 11.3611 17.7778 11.6667 17.7778H19.4444C19.75 17.7778 20 17.5278 20 17.2222V10.5556C20 10.25 19.75 10 19.4444 10ZM6.11111 7.77778H13.8889C14.1944 7.77778 14.4444 7.52778 14.4444 7.22222V0.555556C14.4444 0.25 14.1944 0 13.8889 0H11.1111V3.33333L10 2.59375L8.88889 3.33333V0H6.11111C5.80556 0 5.55556 0.25 5.55556 0.555556V7.22222C5.55556 7.52778 5.80556 7.77778 6.11111 7.77778ZM8.33333 10H5.55556V13.3333L4.44444 12.5938L3.33333 13.3333V10H0.555556C0.25 10 0 10.25 0 10.5556V17.2222C0 17.5278 0.25 17.7778 0.555556 17.7778H8.33333C8.63889 17.7778 8.88889 17.5278 8.88889 17.2222V10.5556C8.88889 10.25 8.63889 10 8.33333 10Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span class="capitalize">
+                                delivery stage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"
+                                fill="none">
+                                <path
+                                    d="M19.7232 8.29491L13.0562 14.9619C12.4609 15.5572 11.4291 15.1405 11.4291 14.2873V10.4776H6.03205C5.50424 10.4776 5.07962 10.0529 5.07962 9.52513V5.71541C5.07962 5.18761 5.50424 4.76299 6.03205 4.76299H11.4291V0.953272C11.4291 0.104024 12.457 -0.316632 13.0562 0.278636L19.7232 6.94563C20.0923 7.31867 20.0923 7.92187 19.7232 8.29491ZM7.61943 14.7635V13.1761C7.61943 12.9142 7.40513 12.6999 7.14321 12.6999H3.80971C3.1073 12.6999 2.53981 12.1324 2.53981 11.43V3.81056C2.53981 3.10814 3.1073 2.54065 3.80971 2.54065H7.14321C7.40513 2.54065 7.61943 2.32636 7.61943 2.06444V0.477058C7.61943 0.21514 7.40513 0.000844033 7.14321 0.000844033H3.80971C1.70643 0.000844033 0 1.70728 0 3.81056V11.43C0 13.5333 1.70643 15.2397 3.80971 15.2397H7.14321C7.40513 15.2397 7.61943 15.0254 7.61943 14.7635Z"
+                                    fill="#616161" />
+                            </svg>
+                            <span>failed ordered</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <script>
+        const openMenuButton = document.getElementById("openMenuButton");
+        const sidebar = document.getElementById("sidebar");
+
+        openMenuButton.addEventListener("click", () => {
+            // Toggle the sidebar by changing its transform property
+            if (sidebar.style.transform === "translateX(0px)") {
+                sidebar.style.transform = "translateX(100%)";
+            } else {
+                sidebar.style.transform = "translateX(0px)";
+            }
+        });
+    </script>
+    <section class="max-w-2xl space-y-8 mx-auto sm:my-2 py-2 px-10 lg:px-0">
+        <!-- building -->
+        <div class="grid grid-cols-4 gap-4 text-black">
+            <!-- Card 1 -->
+            <button id="buttonG"
+                class="toggle-button bg-white shadow-2xl lg:py-7 py-5 border rounded-lg border-[#F0771F]">
+                <p class="toggle-text text-center lg:text-xl text-[#F0771F] text-md pb-1 font-semibold uppercase">G</p>
+            </button>
+
+            <!-- Card 2 -->
+            <button id="buttonH"
+                class="toggle-button bg-white shadow-2xl lg:py-7 py-5 border rounded-lg border-[#F0771F]">
+                <p class="toggle-text text-center lg:text-xl text-[#F0771F] text-md pb-1 font-semibold uppercase">H</p>
+            </button>
+
+            <!-- Card 3 -->
+            <button id="buttonN"
+                class="toggle-button bg-white shadow-2xl lg:py-7 py-5 border rounded-lg border-[#F0771F]">
+                <p class="toggle-text text-center lg:text-xl text-[#F0771F] text-md pb-1 font-semibold uppercase">N</p>
+            </button>
+
+            <!-- Card 4 -->
+            <button id="buttonS"
+                class="toggle-button bg-white shadow-2xl lg:py-7 py-5 border rounded-lg border-[#F0771F]">
+                <p class="toggle-text text-center lg:text-xl text-[#F0771F] text-md pb-1 font-semibold uppercase">S</p>
+            </button>
+        </div>
+
+        <script>
+            const buttons = document.querySelectorAll('.toggle-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (button.classList.contains('bg-[#F0771F]')) {
+                        button.classList.remove('bg-[#F0771F]');
+                        button.classList.add('bg-white');
+                        // text
+                        button.querySelector('.toggle-text').classList.remove('text-white');
+                        button.querySelector('.toggle-text').classList.add('text-[#F0771F]');
+                    } else {
+                        button.classList.remove('bg-white');
+                        button.classList.add('bg-[#F0771F]');
+                        // text
+                        button.querySelector('.toggle-text').classList.remove('text-[#F0771F]');
+                        button.querySelector('.toggle-text').classList.add('text-white');
+                    }
+                });
+            });
+        </script>
+
+        <!-- room -->
+        <section class="grid grid-cols-1 gap-y-6">
+            <div class="bg-white shadow-2xl p-2 rounded-xl">
+                <div class="text-justify font-semibold text-[#616161]">
+                    <p class="text-xl"> Room : G-301 <span> Id : </span></p>
+                    <p class=" text-md">Name : Wardana</p>
+                </div>
+
+                <div class="container px-4 mx-auto">
+                    <p class="text-[#616161] font-medium py-2">Items</p>
+                    <div class="rounded-lg border-2 border-[#F0771F]">
+                        <div class="overflow-x-auto rounded-md">
+                            <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+                                <thead class="ltr:text-left rtl:text-right bg-[#F0771F]">
+                                    <tr>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Items
+                                        </th>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Quantity
+                                        </th>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Price
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="text-center roun">
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <p class="text-[#616161] text-xl font-medium py-2">total : rp.50.000</p>
+
+                    <div class="py-5">
+                        <button type="button"
+                            class="px-8 py-3 w-full bg-[#F32424] text-white font-semibold rounded-2xl uppercase">Kembalikan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-2xl p-2 rounded-xl">
+                <div class="text-justify font-semibold text-[#616161]">
+                    <p class="text-xl"> Room : G-301 <span> Id : </span></p>
+                    <p class=" text-md">Name : Wardana</p>
+                </div>
+
+                <div class="container px-4 mx-auto">
+                    <p class="text-[#616161] font-medium py-2">Items</p>
+                    <div class="rounded-lg border-2 border-[#F0771F]">
+                        <div class="overflow-x-auto rounded-md">
+                            <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+                                <thead class="ltr:text-left rtl:text-right bg-[#F0771F]">
+                                    <tr>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Items
+                                        </th>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Quantity
+                                        </th>
+                                        <th class="whitespace-nowrap px-4 py-3 text-lg font-medium text-[#EAEAEA]">
+                                            Price
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="text-center roun">
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                        <td class=" px-4 py-2 font-medium text-gray-900">
+                                            Alip
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <p class="text-[#616161] text-xl font-medium py-2">total : rp.50.000</p>
+
+                    <div class="py-5">
+                        <button type="button"
+                            class="px-8 py-3 w-full bg-[#F32424] text-white font-semibold rounded-2xl uppercase">Kembalikan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
